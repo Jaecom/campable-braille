@@ -7,7 +7,16 @@ type Props = {
 };
 
 const DownloadScreen = ({ file, onNewFileUpload }: Props) => {
-	const onDownloadClick = () => {};
+	const onDownloadClick = () => {
+		const url = window.URL.createObjectURL(new Blob([file]));
+		const link = document.createElement("a");
+		link.href = url;
+		link.setAttribute("download", "converted_file.txt"); // Set the file name
+		const empty = document.querySelector(".empty")!;
+		empty.appendChild(link);
+		link.click();
+		empty.removeChild(link);
+	};
 
 	return (
 		<div className="w-[500px] flex flex-col items-center gap-y-5 text-center">
@@ -20,6 +29,7 @@ const DownloadScreen = ({ file, onNewFileUpload }: Props) => {
 				<BrfPageIcon />
 				{file.name}
 			</div>
+			<div className="empty hidden"></div>
 
 			<div className="mt-5 flex flex-col gap-y-5">
 				<button className="bg-primary text-white w-[320px] h-[50px]" onClick={onDownloadClick}>

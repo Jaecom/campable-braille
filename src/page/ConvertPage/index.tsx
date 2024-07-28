@@ -1,17 +1,25 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import UploadScreen from "./screens/UploadScreen";
 import DownloadScreen from "./screens/DownloadScreen";
+import axios from "axios";
+import { convertFile } from "@/src/api/request";
 
 const ConvertPage = () => {
 	const [stage, setStage] = useState<"upload" | "convert" | "download">("upload");
 	const [convertedFile, setConvertedFile] = useState<File | null>(null);
 
-	const onFileConfirm = (file: File) => {
-		//convert file
+	const onFileConfirm = async (file: File) => {
+		const formData = new FormData();
+		formData.append("file", file);
 
-		setConvertedFile(file);
-		setStage("download");
+		try {
+			const { data } = await convertFile(formData);
+			setConvertedFile(data);
+			setStage("download");
+		} catch (e) {
+			console.log(e);
+		}
 	};
 
 	return (
