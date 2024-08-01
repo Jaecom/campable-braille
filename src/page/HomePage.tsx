@@ -22,7 +22,7 @@ const HomePage = () => {
 					</p>
 				</div>
 			</section>
-			<section className="h-[500px]  flex flex-col items-center justify-center relative bg-white">
+			<section className="h-[500px]  flex flex-col items-center justify-center relative bg-white text-center">
 				<h2>CONVERT TO BRF</h2>
 				<p>
 					원하는 교육 자료 파일을 Sunny Braille에 업로드해 점자로 변환해보세요. <br />
