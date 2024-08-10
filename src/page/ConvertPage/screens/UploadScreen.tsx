@@ -25,7 +25,6 @@ const UploadScreen = ({ onFileConfirm }: Props) => {
 
 	const handleConfirmClick = () => {
 		if (!file) return;
-
 		onFileConfirm(file);
 	};
 
@@ -40,7 +39,7 @@ const UploadScreen = ({ onFileConfirm }: Props) => {
 					</>
 				) : (
 					<>
-						원하는 교육 자료 파일을 Sunny Braille에 업로드해 점자로 변환해보세요. <br />
+						원하는 교육 자료 파일을 Braille Camp에 업로드해 점자로 변환해보세요. <br />
 						변환된 파일을 다운로드해 점자정보단말기에 읽힐 수 있습니다.
 					</>
 				)}
@@ -75,7 +74,8 @@ const UploadScreen = ({ onFileConfirm }: Props) => {
 			</div>
 
 			<input className="hidden" ref={inputRef} type="file" onChange={handleFileChange} />
-			<p>PDF 형식의 파일을 업로드해주세요</p>
+
+			{!file && <p className="font-light">워드 파일을 업로드해주세요</p>}
 		</div>
 	);
 };

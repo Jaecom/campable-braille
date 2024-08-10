@@ -2,12 +2,14 @@
 import React, { useState } from "react";
 import UploadScreen from "./screens/UploadScreen";
 import DownloadScreen from "./screens/DownloadScreen";
-import axios from "axios";
 import { convertFile } from "@/src/api/request";
 
 const ConvertPage = () => {
 	const [stage, setStage] = useState<"upload" | "convert" | "download">("upload");
-	const [convertedFile, setConvertedFile] = useState<File | null>(null);
+	const [convertedFile, setConvertedFile] = useState<{ file: File | null; filename: string }>({
+		file: null,
+		filename: "",
+	});
 
 	const onFileConfirm = async (file: File) => {
 		const formData = new FormData();
@@ -15,7 +17,8 @@ const ConvertPage = () => {
 
 		try {
 			const { data } = await convertFile(formData);
-			setConvertedFile(data);
+			const filename = file.name.includes(".") ? file.name.split(".")[0] : file.name;
+			setConvertedFile({ file: data, filename });
 			setStage("download");
 		} catch (e) {
 			console.log(e);

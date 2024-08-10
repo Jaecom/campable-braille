@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Navbar = () => {
 	return (
-		<nav className="h-[75px] mx-[32px] flex justify-between  items-center">
+		<nav className="h-[75px] mx-[32px] flex justify-between items-center">
 			<Link href="/">
 				<div className="flex items-center gap-x-2">
 					<BrailleLogo />
