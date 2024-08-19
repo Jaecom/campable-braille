@@ -23,22 +23,25 @@ const DownloadScreen = ({ file, onNewFileUpload }: Props) => {
 
 	return (
 		<div className="w-[500px] flex flex-col items-center gap-y-5 text-center">
-			<h2>파일 변환 완료!</h2>
-			<p>
+			<h2 className="text-primary">파일 변환 완료!</h2>
+			<p className="text-white">
 				{file.filename} 파일 변환이 성공적으로 완성되었습니다. <br />
 				파일 다운로드 버튼을 눌러 점자 파일을 받아보세요!
 			</p>
 			<div className="flex flex-col items-center">
 				<BrfPageIcon />
-				<p className="mt-2 ml-[-5%]">{file.filename}.txt</p>
+				<p className="text-primary mt-2 ml-[-5%]">{file.filename}.txt</p>
 			</div>
 			<div className="empty hidden"></div>
 
 			<div className="mt-5 flex flex-col gap-y-5">
-				<button className="bg-primary text-white w-[320px] h-[50px]" onClick={onDownloadClick}>
+				<button className="bg-primary text-dark-grey w-[320px] h-[50px]" onClick={onDownloadClick}>
 					점자 파일 다운로드하기
 				</button>
-				<button className="border-solid border-black border-[1px] w-[320px] h-[50px]" onClick={onNewFileUpload}>
+				<button
+					className="border-solid border-white text-white border-[1px] w-[320px] h-[50px]"
+					onClick={onNewFileUpload}
+				>
 					새 파일 변환하기
 				</button>
 			</div>

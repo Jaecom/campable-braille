@@ -30,8 +30,8 @@ const UploadScreen = ({ onFileConfirm }: Props) => {
 
 	return (
 		<div className="w-[500px] flex flex-col items-center gap-y-5 text-center">
-			<h2>{file ? "파일 변환하기" : "파일 업로드하기"}</h2>
-			<p>
+			<h2 className="text-primary">{file ? "파일 변환하기" : "파일 업로드하기"}</h2>
+			<p className="text-white">
 				{file ? (
 					<>
 						{file.name} 파일이 성공적으로 업로드 되었습니다. <br /> 파일을 BRF 형식으로 변환하기 위해 변환 버튼을
@@ -48,7 +48,7 @@ const UploadScreen = ({ onFileConfirm }: Props) => {
 			{file ? (
 				<div className="flex flex-col items-center">
 					<UploadCompleteIcon />
-					<p className="mt-[15px]">{file.name}</p>
+					<p className="mt-[15px] text-primary">{file.name}</p>
 				</div>
 			) : (
 				<PageIcon />
@@ -56,17 +56,20 @@ const UploadScreen = ({ onFileConfirm }: Props) => {
 
 			<div className="mt-5 flex flex-col gap-y-5">
 				{!file && (
-					<button className="bg-primary text-white w-[320px] h-[50px]" onClick={handleUploadClick}>
+					<button className="bg-primary text-dark-grey w-[320px] h-[50px]" onClick={handleUploadClick}>
 						파일 업로드하기
 					</button>
 				)}
 
 				{file && (
 					<>
-						<button className="bg-primary text-white w-[320px] h-[50px]" onClick={handleConfirmClick}>
+						<button className="bg-primary text-dark-grey w-[320px] h-[50px]" onClick={handleConfirmClick}>
 							파일 변환하기
 						</button>
-						<button className="border-solid border-black border-[1px] w-[320px] h-[50px]" onClick={handleUploadClick}>
+						<button
+							className="border-solid border-white text-white border-[1px] w-[320px] h-[50px]"
+							onClick={handleUploadClick}
+						>
 							파일 재업로드하기
 						</button>
 					</>
@@ -75,7 +78,7 @@ const UploadScreen = ({ onFileConfirm }: Props) => {
 
 			<input className="hidden" ref={inputRef} type="file" onChange={handleFileChange} />
 
-			{!file && <p className="font-light">워드 파일을 업로드해주세요</p>}
+			{!file && <p className="font-light text-primary">워드 파일을 업로드해주세요</p>}
 		</div>
 	);
 };

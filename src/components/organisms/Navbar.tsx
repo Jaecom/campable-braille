@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Navbar = () => {
 	return (
-		<nav className="h-[75px] mx-[32px] flex justify-between items-center">
+		<nav className="h-[75px] px-[32px] flex justify-between items-center bg-dark-grey text-primary">
 			<Link href="/">
 				<div className="flex items-center gap-x-2">
 					<BrailleLogo />
@@ -19,7 +19,7 @@ const Navbar = () => {
 					<NavLink href="/convert">파일 변환하기</NavLink>
 				</li>
 				<li className="h-full">
-					<NavLink href="/info">도움말</NavLink>
+					<NavLink href="/campable">CampAble</NavLink>
 				</li>
 			</ul>
 		</nav>

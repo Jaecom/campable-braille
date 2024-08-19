@@ -9,7 +9,8 @@ const config: Config = {
 				"gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
 			},
 			colors: {
-				primary: "#1F2024",
+				primary: "#FFDF2D",
+				"dark-grey": "#121212",
 			},
 		},
 	},
