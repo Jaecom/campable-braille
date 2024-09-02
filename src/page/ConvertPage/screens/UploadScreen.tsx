@@ -76,7 +76,7 @@ const UploadScreen = ({ onFileConfirm }: Props) => {
 				)}
 			</div>
 
-			<input className="hidden" ref={inputRef} type="file" onChange={handleFileChange} />
+			<input className="hidden" ref={inputRef} type="file" onChange={handleFileChange} accept=".doc,.docx" />
 
 			{!file && <p className="font-light text-primary">워드 파일을 업로드해주세요</p>}
 		</div>
