@@ -13,12 +13,12 @@ const HomePage = () => {
 				<div className="w-[600px] flex flex-col gap-y-[5px] relative z-10 text-primary">
 					<h1>Braille Camp</h1>
 					<div className="text-[20px] font-bold">
-						Braille Camp은 해바라기팀이 개발한 교육용 웹 점역 소프트웨어 입니다.
+						Braille Camp은 Campable 팀이 개발한 교육용 웹 점역 소프트웨어 입니다.
 					</div>
 					<p>
 						Braille Camp은 텍스트 뿐만 수식도 점역해 낼 수 있는 수학에 특화된 점역 프로그램입니다.
 						<br className="hidden md:block" />
-						해바라기 팀은 고객님이 쉽고 빠르게 원하는 교육 자료를 점역하고 더 많은 교육 자료의 접근성을 높이려 노력하고
+						Campable 팀은 고객님이 쉽고 빠르게 원하는 교육 자료를 점역하고 더 많은 교육 자료의 접근성을 높이려 노력하고
 						있습니다.
 					</p>
 				</div>
