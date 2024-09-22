@@ -1,3 +1,4 @@
+/* Base styles */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -11,26 +12,39 @@
 	word-break: keep-all;
 }
 
+/* Default styles (for all screen sizes) */
 h1 {
-	font-size: 60px;
-	font-weight: 600;
-	text-transform: uppercase;
+	@apply text-[60px] font-semibold uppercase;
 }
 
 h2 {
-	font-size: 48px;
-	font-weight: 600;
-	text-transform: uppercase;
+	@apply text-[48px] font-semibold uppercase;
 }
 
 h3 {
-	font-size: 36px;
-	font-weight: 600;
-	text-transform: uppercase;
+	@apply text-[36px] font-semibold uppercase;
 }
 
 p {
-	font-size: 16px;
-	line-height: 1.7;
-	font-weight: 400;
+	@apply text-[16px] leading-7 font-normal;
+}
+
+/* Responsive styles for md and larger */
+@media (max-width: 768px) {
+	h1 {
+		font-size: 40px; /* Adjusted size for md screens */
+	}
+
+	h2 {
+		font-size: 30px; /* Adjusted size for md screens */
+	}
+
+	h3 {
+		font-size: 28px; /* Adjusted size for md screens */
+	}
+
+	p {
+		font-size: 14px; /* Adjusted size for md screens */
+		line-height: 1.6;
+	}
 }

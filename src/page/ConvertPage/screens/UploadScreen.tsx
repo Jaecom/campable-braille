@@ -29,7 +29,7 @@ const UploadScreen = ({ onFileConfirm }: Props) => {
 	};
 
 	return (
-		<div className="w-[500px] flex flex-col items-center gap-y-5 text-center">
+		<div className="md:w-[500px] flex flex-col items-center gap-y-5 text-center">
 			<h2 className="text-primary">{file ? "파일 변환하기" : "파일 업로드하기"}</h2>
 			<p className="text-white">
 				{file ? (

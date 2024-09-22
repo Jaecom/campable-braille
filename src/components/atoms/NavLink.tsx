@@ -8,17 +8,19 @@ type Props = {
 	href: string;
 	children?: React.ReactNode;
 	disableActive?: boolean;
+	onClick?: () => void;
 };
 
-const NavLink = ({ href, children, disableActive }: Props) => {
+const NavLink = ({ href, children, disableActive, onClick }: Props) => {
 	const pathname = usePathname();
 	const isActive = pathname === href;
 
 	return (
 		<Link
+			onClick={onClick}
 			className={`h-full ${
 				isActive && !disableActive ? "border-b-[2px] border-primary border-solid font-bold" : "font-light"
-			} flex items-center`}
+			} flex items-center text-primary`}
 			href={href}
 		>
 			{children}

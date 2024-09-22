@@ -9,19 +9,20 @@ import UserFeedbackItem from "./UserFeedbackItem";
 const HomePage = () => {
 	return (
 		<div>
-			<section className="h-[500px] px-[100px] flex items-center relative overflow-hidden justify-between">
+			<section className="h-[500px] px-[16px] md:px-[100px] flex items-center relative overflow-hidden justify-between">
 				<div className="w-[600px] flex flex-col gap-y-[5px] relative z-10 text-primary">
 					<h1>Braille Camp</h1>
 					<div className="text-[20px] font-bold">
 						Braille Camp은 해바라기팀이 개발한 교육용 웹 점역 소프트웨어 입니다.
 					</div>
 					<p>
-						Braille Camp은 텍스트 뿐만 수식도 점역해 낼 수 있는 수학에 특화된 점역 프로그램입니다. <br />
+						Braille Camp은 텍스트 뿐만 수식도 점역해 낼 수 있는 수학에 특화된 점역 프로그램입니다.
+						<br className="hidden md:block" />
 						해바라기 팀은 고객님이 쉽고 빠르게 원하는 교육 자료를 점역하고 더 많은 교육 자료의 접근성을 높이려 노력하고
 						있습니다.
 					</p>
 				</div>
-				<div>
+				<div className="hidden md:block">
 					<div className="mb-[100px]">
 						<Image
 							src="/images/home_equation.png"
@@ -39,7 +40,7 @@ const HomePage = () => {
 			<section className="h-[500px] flex flex-col items-center justify-center relative bg-primary text-center">
 				<h2 className="text-dark-grey">CONVERT TO BRAILLE</h2>
 				<p className="text-dark-grey">
-					원하는 교육 자료 파일을 Braille Camp에 업로드해 점자로 변환해보세요. <br />
+					원하는 교육 자료 파일을 Braille Camp에 업로드해 점자로 변환해보세요. <br className="hidden md:block" />
 					변환된 파일을 다운로드해 점자정보단말기에 읽힐 수 있습니다.
 				</p>
 				<Link
@@ -52,8 +53,10 @@ const HomePage = () => {
 
 			<section className="flex flex-col justify-center items-center bg-dark-grey py-[80px] gap-y-[20px]">
 				<h2 className="text-primary">Quick & Easy</h2>
-				<p className="text-white">텍스트와 수식을 점자정보단말기에 읽을 수 있는 점자 형식으로 빠르게 변환합니다 :)</p>
-				<div className="mt-[50px] flex items-center gap-x-[20px]">
+				<p className="text-white text-center md:text-left">
+					텍스트와 수식을 점자정보단말기에 읽을 수 있는 점자 형식으로 빠르게 변환합니다 :)
+				</p>
+				<div className="mt-[50px] flex flex-col md:flex-row items-center gap-x-[20px] gap-y-[20px]">
 					<Image
 						src="/images/home_braille_1.png"
 						width={284}
@@ -61,7 +64,9 @@ const HomePage = () => {
 						alt="image_1"
 						style={{ objectFit: "cover" }}
 					/>
-					<SmallArrow />
+					<div className="rotate-90 md:rotate-0">
+						<SmallArrow />
+					</div>
 					<Image
 						src="/images/home_braille_2.png"
 						width={284}
@@ -69,7 +74,9 @@ const HomePage = () => {
 						alt="image_1"
 						style={{ objectFit: "cover" }}
 					/>
-					<BigArrow />
+					<div className="rotate-90 md:rotate-0 py-[20px] md:py-0">
+						<BigArrow />
+					</div>
 					<Image
 						src="/images/home_braille_3.png"
 						width={540}

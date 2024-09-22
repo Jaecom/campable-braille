@@ -22,7 +22,7 @@ const DownloadScreen = ({ file, onNewFileUpload }: Props) => {
 	};
 
 	return (
-		<div className="w-[500px] flex flex-col items-center gap-y-5 text-center">
+		<div className="md:w-[500px] flex flex-col items-center gap-y-5 text-center">
 			<h2 className="text-primary">파일 변환 완료!</h2>
 			<p className="text-white">
 				{file.filename} 파일 변환이 성공적으로 완성되었습니다. <br />

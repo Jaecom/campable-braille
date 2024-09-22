@@ -6,9 +6,9 @@ const lora = Lora({ subsets: ["latin"] });
 const CampAblePage = () => {
 	return (
 		<div className="h-full flex flex-col items-center justify-center">
-			<div className={`text-primary ${lora.className} font-bold text-[60px]`}>CampAble</div>
-			<div className="text-center">
-				<p className={`text-white font-bold ${lora.className} text-[20px]`}>
+			<div className={`text-primary ${lora.className} font-bold text-[30px] md:text-[60px]`}>CampAble</div>
+			<div className="text-center px-[16px]">
+				<p className={`text-white font-bold ${lora.className} text-[18px] md:text-[20px]`}>
 					Empowering people with disability to believe in their ability
 				</p>
 				<p className="text-white max-w-[650px] mt-[10px]">
@@ -25,8 +25,9 @@ const CampAblePage = () => {
 					</a>
 				</div>
 			</div>
-			<div className="mt-[200px]">
-				<a href="mailto:campable.io@gmail.com" className="text-white">
+			<div className="mt-[200px] text-center text-primary">
+				<h4>Contact Us</h4>
+				<a className="underline" href="mailto:campable.io@gmail.com">
 					campable.io@gmail.com
 				</a>
 			</div>
