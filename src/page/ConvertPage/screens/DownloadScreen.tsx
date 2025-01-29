@@ -14,7 +14,7 @@ const DownloadScreen = ({ file, onNewFileUpload }: Props) => {
 		const url = window.URL.createObjectURL(new Blob([fileData]));
 		const link = document.createElement("a");
 		link.href = url;
-		link.setAttribute("download", `${filename}_converted`);
+		link.setAttribute("download", `${filename}_converted.txt`);
 		const empty = document.querySelector(".empty")!;
 		empty.appendChild(link);
 		link.click();

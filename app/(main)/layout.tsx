@@ -7,10 +7,10 @@ type Props = {
 
 const Layout = ({ children }: Props) => {
 	return (
-		<div className="min-h-screen flex flex-col">
+		<div>
 			<Navbar />
-			<main className="flex-1 relative bg-gray-50">
-				<div className="absolute inset-0 bg-dark-grey">{children}</div>
+			<main className="min-h-screen flex flex-col justify-center items-center bg-dark-grey relative py-10">
+				{children}
 			</main>
 		</div>
 	);

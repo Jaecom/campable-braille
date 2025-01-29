@@ -15,7 +15,10 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={inter.className}>{children}</body>
+			<body className={inter.className + " relative"}>
+				<div id="modal" className="fixed inset-0 flex justify-center items-center pointer-events-none z-50"></div>
+				{children}
+			</body>
 		</html>
 	);
 }

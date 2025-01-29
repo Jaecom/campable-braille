@@ -11,3 +11,11 @@ export const convertFile = async (formData: FormData) =>
 		},
 		responseType: "blob",
 	});
+
+export const processOcr = async (formData: FormData) =>
+	await axios.post("/braille/ocr", formData, {
+		headers: {
+			"Content-Type": "multipart/form-data",
+		},
+		responseType: "blob",
+	});

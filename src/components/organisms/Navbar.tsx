@@ -30,6 +30,9 @@ const Navbar = () => {
 						<NavLink href="/convert">파일 변환하기</NavLink>
 					</li>
 					<li className="h-full">
+						<NavLink href="/ocr">OCR</NavLink>
+					</li>
+					<li className="h-full">
 						<NavLink href="/campable">CampAble</NavLink>
 					</li>
 				</ul>
@@ -49,6 +52,11 @@ const Navbar = () => {
 					<li className="h-full py-[20px]">
 						<NavLink href="/convert" disableActive onClick={toggleMenu}>
 							파일 변환하기
+						</NavLink>
+					</li>
+					<li className="h-full py-[20px]">
+						<NavLink href="/ocr" disableActive onClick={toggleMenu}>
+							OCR
 						</NavLink>
 					</li>
 					<li className="h-full py-[20px]">

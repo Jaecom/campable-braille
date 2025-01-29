@@ -8,7 +8,7 @@ import UserFeedbackItem from "./UserFeedbackItem";
 
 const HomePage = () => {
 	return (
-		<div>
+		<div className="w-full">
 			<section className="h-[500px] px-[16px] md:px-[100px] flex items-center relative overflow-hidden justify-between">
 				<div className="w-[600px] flex flex-col gap-y-[5px] relative z-10 text-primary">
 					<h1>Braille Camp</h1>
