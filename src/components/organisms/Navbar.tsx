@@ -27,13 +27,13 @@ const Navbar = () => {
 						<NavLink href="/">제품 소개</NavLink>
 					</li>
 					<li className="h-full">
-						<NavLink href="/convert">워드 파일 변환하기</NavLink>
+						<NavLink href="/convert">워드 파일 변환</NavLink>
 					</li>
 					<li className="h-full">
 						<NavLink href="/ocr">OCR</NavLink>
 					</li>
 					<li className="h-full">
-						<NavLink href="/ocr-oneclick">OCR-원클릭</NavLink>
+						<NavLink href="/ocr-oneclick">OCR 원클릭</NavLink>
 					</li>
 					<li className="h-full">
 						<NavLink href="/campable">CampAble</NavLink>
