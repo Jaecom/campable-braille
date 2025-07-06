@@ -1,17 +1,17 @@
-"use client";
+"use client"
 
-import React, { useState } from "react";
-import NavLink from "../atoms/NavLink";
-import BrailleLogo from "@/public/icons/braille-logo-icon.svg";
-import Link from "next/link";
-import HamburgerMenu from "../atoms/HamburgerMenu";
+import React, { useState } from "react"
+import NavLink from "../atoms/NavLink"
+import BrailleLogo from "@/public/icons/braille-logo-icon.svg"
+import Link from "next/link"
+import HamburgerMenu from "../atoms/HamburgerMenu"
 
 const Navbar = () => {
-	const [isOpen, setIsOpen] = useState(false);
+	const [isOpen, setIsOpen] = useState(false)
 
 	const toggleMenu = () => {
-		setIsOpen(!isOpen);
-	};
+		setIsOpen(!isOpen)
+	}
 
 	return (
 		<nav className="h-[75px]">
@@ -31,6 +31,9 @@ const Navbar = () => {
 					</li>
 					<li className="h-full">
 						<NavLink href="/ocr">OCR</NavLink>
+					</li>
+					<li className="h-full">
+						<NavLink href="/ocr-oneclick">OCR-Oneclick</NavLink>
 					</li>
 					<li className="h-full">
 						<NavLink href="/campable">CampAble</NavLink>
@@ -64,10 +67,15 @@ const Navbar = () => {
 							CampAble
 						</NavLink>
 					</li>
+					<li className="h-full py-[20px]">
+						<NavLink href="/ocr-oneclick" disableActive onClick={toggleMenu}>
+							OCR-Oneclick
+						</NavLink>
+					</li>
 				</ul>
 			)}
 		</nav>
-	);
-};
+	)
+}
 
-export default Navbar;
+export default Navbar
