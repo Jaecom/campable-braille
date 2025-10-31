@@ -1,10 +1,10 @@
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
-import BrailleGroup from "@/public/icons/home_braille.svg";
-import SmallArrow from "@/public/icons/arrow_small.svg";
-import BigArrow from "@/public/icons/arrow_big.svg";
-import UserFeedbackItem from "./UserFeedbackItem";
+import React from "react"
+import Link from "next/link"
+import Image from "next/image"
+import BrailleGroup from "@/public/icons/home_braille.svg"
+import SmallArrow from "@/public/icons/arrow_small.svg"
+import BigArrow from "@/public/icons/arrow_big.svg"
+import UserFeedbackItem from "./UserFeedbackItem"
 
 const HomePage = () => {
 	return (
@@ -89,7 +89,6 @@ const HomePage = () => {
 			<section className="flex flex-col items-center justify-center bg-primary py-[30px]">
 				<div className="mb-[30px]">
 					<h3>User Feedback</h3>
-					<p>2023년도 11월 MVP 사용자 테스트 피드백</p>
 				</div>
 				<UserFeedbackItem
 					imageSrc="/images/home_feedback_1.png"
@@ -115,7 +114,7 @@ const HomePage = () => {
 				/>
 			</section>
 		</div>
-	);
-};
+	)
+}
 
-export default HomePage;
+export default HomePage
